@@ -5,6 +5,23 @@ public class SnakeAndLadder{
         
         int player1 = 0;
 
+        while( player1 != 100 ){
+            int dice = rollDice();
+            int option = checkOptions();
+            if ( option == 1){
+                player1 += dice;
+                if(player1>100){
+                    player1 -= dice;
+                }
+            }else if ( option == 2){
+                player1 -= dice;
+                if(player1 < 0){
+                    player1 = 0;
+                }
+            }
+        }
+        System.out.println("Player1 won");
+
     }
     
     public static int rollDice(){
