@@ -15,6 +15,8 @@ public class EmployeeWage {
         System.out.println("Employee wages : "+ 20* employee.empWorkingHrs());
 
         System.out.println("Employee Daily Wage using switch case : "+ employee.withSwitchCase());
+
+        System.out.println("Monthly wages : "+employee.monthlyWages());
     }
 }
 
@@ -67,5 +69,13 @@ class Employee{
 
         }
     }
-    
+    public int monthlyWages(){
+        int totalWorkingDays = 20;
+        int wagePerHr = 20;
+        int totalHrs = 0;
+        for(int i=0;i<totalWorkingDays;i++){
+            totalHrs += empWorkingHrs();
+        }
+        return totalHrs*wagePerHr;
+    }
 }
