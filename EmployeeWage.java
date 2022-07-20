@@ -11,6 +11,8 @@ public class EmployeeWage {
         }
 
         System.out.println("Employee Daily Wage : "+employee.calculateEmpDailyWage());
+
+        System.out.println("Employee wages : "+ 20* employee.empWorkingHrs());
     }
 }
 
@@ -34,6 +36,20 @@ class Employee{
         }else{
             return 0;
         }
+    }
+    public int empWorkingHrs(){
+        int isFullTime = 1;
+        int isPartTime = 2;
+        int fullTimeHrs = 8;
+        int partTimeHrs = 4;
+        int empCheck = (int) Math.floor(Math.random()*10)%3;
+
+        if(empCheck == isFullTime)
+            return fullTimeHrs;
+        else if(empCheck == isPartTime)
+            return partTimeHrs;
+        else
+            return 0;
     }
     
 }
