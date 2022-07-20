@@ -7,4 +7,8 @@ public class SnakeAndLadder{
 
     }
     
+    public static int rollDice(){
+        return (int) ((Math.random()*10)%6) + 1;
+    }
+    
 }
