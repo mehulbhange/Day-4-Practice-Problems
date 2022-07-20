@@ -9,6 +9,8 @@ public class EmployeeWage {
         }else{
             System.out.println("Employee is not present");
         }
+
+        System.out.println("Employee Daily Wage : "+employee.calculateEmpDailyWage());
     }
 }
 
@@ -24,6 +26,14 @@ class Employee{
             return false;
         }
     }
-
+    public int calculateEmpDailyWage(){
+        int wagePerHr = 20;
+        int fullTimeHrs = 8;
+        if(isEmployeePresent()){
+            return wagePerHr * fullTimeHrs;
+        }else{
+            return 0;
+        }
+    }
     
 }
