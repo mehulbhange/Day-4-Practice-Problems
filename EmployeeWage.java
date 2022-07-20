@@ -58,9 +58,9 @@ class Employee{
         int hrs = empWorkingHrs();
         int wagePerHr = 20;
         switch(hrs){
-            case 1:
+            case 8:
                 return wagePerHr * hrs;
-            case 2:
+            case 4:
                 return wagePerHr * hrs;
             default:
                 return 0;
