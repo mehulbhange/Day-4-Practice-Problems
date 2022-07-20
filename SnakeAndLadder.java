@@ -10,5 +10,12 @@ public class SnakeAndLadder{
     public static int rollDice(){
         return (int) ((Math.random()*10)%6) + 1;
     }
-    
+
+    // 0 -> No Play
+    // 1 -> Ladder
+    // 2 -> Snake
+    public static int checkOptions(){
+        return (int) (Math.random()*10)%3; 
+    }
+
 }
