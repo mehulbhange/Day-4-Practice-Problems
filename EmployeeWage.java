@@ -13,6 +13,8 @@ public class EmployeeWage {
         System.out.println("Employee Daily Wage : "+employee.calculateEmpDailyWage());
 
         System.out.println("Employee wages : "+ 20* employee.empWorkingHrs());
+
+        System.out.println("Employee Daily Wage using switch case : "+ employee.withSwitchCase());
     }
 }
 
@@ -50,6 +52,20 @@ class Employee{
             return partTimeHrs;
         else
             return 0;
+    }
+
+    public int withSwitchCase(){
+        int hrs = empWorkingHrs();
+        int wagePerHr = 20;
+        switch(hrs){
+            case 1:
+                return wagePerHr * hrs;
+            case 2:
+                return wagePerHr * hrs;
+            default:
+                return 0;
+
+        }
     }
     
 }
