@@ -3,20 +3,27 @@ public class EmployeeWage {
         System.out.println("Welcome to Employee Wage Computation");
         
         Employee employee = new Employee();
-        employee.isEmployeePresent();
-    }
-}
-
-class Employee{
-
-    public void isEmployeePresent(){
-        int isPresent = 1;
-        int empCheck = (int) Math.floor(Math.random()*10)%2;
-
-        if(empCheck == isPresent){
+        
+        if(employee.isEmployeePresent()){
             System.out.println("Employee is present");
         }else{
             System.out.println("Employee is not present");
         }
     }
+}
+
+class Employee{
+
+    public boolean isEmployeePresent(){
+        int isPresent = 1;
+        int empCheck = (int) Math.floor(Math.random()*10)%2;
+
+        if(empCheck == isPresent){
+            return  true;
+        }else{
+            return false;
+        }
+    }
+
+    
 }
